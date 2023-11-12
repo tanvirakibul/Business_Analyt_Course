@@ -52,3 +52,17 @@ ORDER BY restaurant_id ASC, price DESC;
 
 SELECT * FROM rider_info
 LIMIT 20;
+
+
+SELECT * FROM user_info;
+
+
+SELECT name, registration_date, operating_system FROM user_info
+WHERE operating_system = 'Android';
+
+SELECT name, registration_date FROM user_info
+WHERE registration_date >= '2023-04-14'
+ORDER BY registration_date ASC;
+
+
+
