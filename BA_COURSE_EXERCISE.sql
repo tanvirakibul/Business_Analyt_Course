@@ -12,26 +12,48 @@ CITY VARCHAR(20)
 
 );
 
-# Rename The Table
+-- # Rename The Table
 
-ALTER TABLE USER_TABLE
-RENAME TO USER_TAB;
+-- ALTER TABLE USER_TABLE
+-- RENAME TO USER_TAB;
 
-# Adding a New Column
+-- # Adding a New Column
 
-ALTER TABLE USER_TAB
-ADD COLUMN GENDER CHAR(1);
+-- ALTER TABLE USER_TAB
+-- ADD COLUMN GENDER CHAR(1);
 
-# Delecting Column 
-ALTER TABLE USER_TAB
-DROP COLUMN GENDER;
-
-
-#Truncate Table
-TRUNCATE TABLE USER_TAB;
-
-# Delete Table 
-
-DROP TABLE USER_TAB;
+-- # Delecting Column 
+-- ALTER TABLE USER_TAB
+-- DROP COLUMN GENDER;
 
 
+-- #Truncate Table
+-- TRUNCATE TABLE USER_TAB;
+
+-- # Delete Table 
+
+-- DROP TABLE USER_TAB;
+
+
+# Inserting Data
+INSERT INTO USER_TABLE
+VALUES
+(1, NOW(), "Jhon Doe", '1234567890', 'Android', TRUE, 'Dhaka'),
+(2, NOW(), "Jhon Smith", '2334567890', 'IOS', False, 'Chittagong'),
+(3, NOW(), "Jhon Wick", '1234534890', 'Windows', TRUE, 'Sylhet');
+
+#View the Table
+SELECT NAME, PHONE_NUMBER, CITY FROM USER_TABLE;
+
+
+UPDATE USER_TABLE SET OTP_VARIFIED = True;
+
+
+#View the Table
+SELECT * FROM USER_TABLE;
+
+SET SQL_SAFE_UPDATES = 0;
+
+
+DELETE FROM USER_TABLE;
+COMMIT;
